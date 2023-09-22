@@ -10,6 +10,11 @@ int main(){
   // do{
   //      //find the midpoint
   //     int mid = len/2;
+         bool check = target == arr[mid];
+         if(target){
+         return mid;
+         
+}
   //  }
   //  while()
 }
