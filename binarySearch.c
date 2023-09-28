@@ -1,15 +1,12 @@
 #include <stdio.h>
 
-int main(){
-    int arr[10] = {0,1,2,3,4,5,6,7,8,9};
+int main() {
+int arr[10] = {0,1,2,3,4,5,6,7,8,9};
     int len = 10;
     int target = 3;
     int begin = 0;
     int end = 9;
-    int result = -1
-    for ( int i = 0; i < 10; i++ ) {
-        printf("Element %i is %i \n",i, arr[i]);
-    }
+    int result = -1;
   do{
        //find the midpoint
       int mid = (begin + end)/2;
@@ -17,15 +14,16 @@ int main(){
          result =  mid;
         }
         if(target > arr[mid]){
-         begin =  mid + 1
+         begin =  mid + 1;
         }
       else
-            end = mid - 1
+            end = mid - 1;
 
    }
-   while(begin <= end )
-}
+   while(begin <= end );
+
 if(result == -1)
-    print("Not found")
+    printf("Not found");
 else
-    print("found at %d",result);
+    printf("found at %d",result);
+}
