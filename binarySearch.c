@@ -4,23 +4,28 @@ int main(){
     int arr[10] = {0,1,2,3,4,5,6,7,8,9};
     int len = 10;
     int target = 3;
-    int begin = arr[0];
-    int end = arr[9];
+    int begin = 0;
+    int end = 9;
+    int result = -1
     for ( int i = 0; i < 10; i++ ) {
         printf("Element %i is %i \n",i, arr[i]);
     }
   do{
        //find the midpoint
-      int mid = len/2;
-         bool check = target == arr[mid];
-         if(check){
-         return mid;
+      int mid = (begin + end)/2;
+         if(arr[mid] == target){
+         result =  mid;
         }
-        len = mid
         if(target > arr[mid]){
-         begin =  arr[mid]
+         begin =  mid + 1
         }
+      else
+            end = mid - 1
 
    }
-   while()
+   while(begin <= end )
 }
+if(result == -1)
+    print("Not found")
+else
+    print("found at %d",result);
